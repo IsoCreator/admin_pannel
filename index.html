@@ -72,36 +72,70 @@
 					  <input type="text" class="form-control" id="surname" placeholder="Surname">
 					</div>
 				</div>
-				    <div class="form-group">
-						<label for="exampleFormControlSelect1">Age: </label>
-						<select class="form-control" id="age">
-							<option value="" disabled="disabled" selected="selected">--Select--</option>
-							<option value="Under 16 years old">Under 16 years old</option>
-							<option value="16-18 years old">16-18 years old</option>
-							<option value="19-21 years old">19-21 years old</option>
-							<option value="22-24 years old">22-24 years old</option>
-							<option value="Over 24 years old">Over 24 years old</option>
-						</select>
+				<div class="form-group row">
+					<label for="inputAge" class="col-sm-2 col-form-label">Age: </label>
+					<div class="col-sm-10">
+					<select class="form-control" id="age">
+						<option value="" disabled="disabled" selected="selected">--Select--</option>
+						<option value="Under 16 years old">Under 16 years old</option>
+						<option value="16-18 years old">16-18 years old</option>
+						<option value="19-21 years old">19-21 years old</option>
+						<option value="22-24 years old">22-24 years old</option>
+						<option value="Over 24 years old">Over 24 years old</option>
+					</select>
 					</div>
-				<fieldset class="form-group">
-					<div class="row">
-						<legend class="col-form-label col-sm-2 pt-0">Gender: </legend>
-							<div class="col-sm-10">
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="option1" checked>
-									<label class="form-check-label" for="gridRadios1">
-										Man
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2">
-									<label class="form-check-label" for="gridRadios2">
-										Woman
-									</label>
-								</div>
-							  </div>
+				</div>
+				<div class="form-group row">
+					<legend class="col-form-label col-sm-2 pt-0">Gender: </legend>
+						<div class="col-sm-10">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="option1" checked>
+								<label class="form-check-label" for="gridRadios1">
+									Man
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2">
+								<label class="form-check-label" for="gridRadios2">
+									Woman
+								</label>
+							</div>
+						</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-2">Interests: </div>
+					<div class="col-sm-10">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1" name="hobby[]" value="Coding / Programming">
+							<label class="form-check-label" for="gridCheck1">
+								Coding / Programming
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck2" name="hobby[]" value="Crossword puzzles">
+							<label class="form-check-label" for="gridCheck2">
+								Crossword puzzles
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck3" name="hobby[]" value="Marathon running">
+							<label class="form-check-label" for="gridCheck3">
+								Marathon running
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck4" name="hobby[]" value="Video games">
+							<label class="form-check-label" for="gridCheck4">
+								Video games
+							</label>
+						</div>
 					</div>
-				</fieldset>
+				</div>
+				<div class="form-group row">
+				<div class="col-sm-2">Description: </div>
+				<div class="col-sm-10">
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
 			  </div>
 			  <div class="col-md-2">
 			  </div>
