@@ -30,17 +30,17 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Log In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#">Register</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Security action</a>
+              <a class="dropdown-item" href="#">Log out</a>
             </div>
           </li>
         </ul>
@@ -60,6 +60,7 @@
 			  </div>
 			  <div class="col-md-8">
 				<h2>Fill in the form</h2>
+				<hr>
 				<div class="form-group row">
 					<label for="inputFirstname" class="col-sm-2 col-form-label">Name: </label>
 					<div class="col-sm-10">
@@ -86,24 +87,24 @@
 					</div>
 				</div>
 				<div class="form-group row">
-					<legend class="col-form-label col-sm-2 pt-0">Gender: </legend>
-						<div class="col-sm-10">
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="option1" checked>
-								<label class="form-check-label" for="gridRadios1">
-									Man
-								</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2">
-								<label class="form-check-label" for="gridRadios2">
-									Woman
-								</label>
-							</div>
+					<label for="inputGender" class="col-sm-2 col-form-label pt-0">Gender: </label>
+					<div class="col-sm-10">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="option1" checked>
+							<label class="form-check-label" for="gridRadios1">
+								Man
+							</label>
 						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2">
+							<label class="form-check-label" for="gridRadios2">
+								Woman
+							</label>
+						</div>
+					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-sm-2">Interests: </div>
+					<label for="inputInterests" class="col-sm-2 col-form-label pt-0">Interests: </label>
 					<div class="col-sm-10">
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" id="gridCheck1" name="hobby[]" value="Coding / Programming">
@@ -132,25 +133,45 @@
 					</div>
 				</div>
 				<div class="form-group row">
-				<div class="col-sm-2">Description: </div>
-				<div class="col-sm-10">
-					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					<label for="inputDescription" class="col-sm-2 col-form-label pt-0">Description: </label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="FormControlTextarea1" rows="2"></textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="inputPassword" class="col-sm-2 col-form-label pt-0">Password: </label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="InputPassword1" placeholder="Password" name="password">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="inputRepeatPassword" class="col-sm-2 col-form-label pt-0">Repeat password: </label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="InputRepeatPassword1" placeholder="Repeat password" name="password">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="inputFormControlFile1" class="col-sm-2 col-form-label pt-0">Photo: </label>
+					<div class="col-sm-10">
+						<input type="file" class="form-control-file" name="fileToUpload" id="fileToUpload" accept="image/jpeg">
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class="form-group row">
+					<div class="col-sm-10">
+						<button type="button" class="btn btn-primary">Submit</button>
+					</div>
 				</div>
 			  </div>
 			  <div class="col-md-2">
 			  </div>
 			</div>
 
-			<hr>
-
 		  </div> <!-- /container -->
 
     </main>
-
-    <footer class="container">
-      <p>&copy; Company 2017-2018</p>
-    </footer>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
