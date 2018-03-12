@@ -27,6 +27,7 @@
 	</body>
 </html>
 <?php
+	// logging into the database
 	$servername = ;
 	$username = ;
 	$password_1 = ;
@@ -37,6 +38,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 	
+	// name_here = $_POST["name_in_database"];
 	$name = $_POST["db_name"];
 	$surname = $_POST["db_surname"];
 	$age = $_POST["db_age"];
