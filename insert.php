@@ -58,12 +58,30 @@
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	
+	echo "<table class='table'>";
+	echo "<thead><tr><th scope='col'>Id</th><th scope='col'>Name</th><th scope='col'>Surname</th><th scope='col'>Age</th><th scope='col'>Gender</th><th scope='col'>Interests</th><th scope='col'>Description</th><th scope='col'>Password</th><th scope='col'Date added</th><th scope='col'>Photo</th><th scope='col'>Edit</th><th scope='col'>Delete</th></tr></thead>";
+	
 	$sql = "SELECT id, db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, date, db_picture FROM user";
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
+			echo "<tbody><tr><td>" . $row["id"] . "</td>";
+			echo "<td>" . $row["db_name"] . "</td>"; 
+			echo "<td>" . $row["db_surname"] . "</td>"; 
+			echo "<td>" . $row["db_age"] . "</td>"; 
+			echo "<td>" . $row["db_gender"] . "</td>"; 
+			echo "<td>" . $row["db_hobby"] . "</td>"; 
+			echo "<td>" . $row["db_description"] . "</td>"; 
+			echo "<td>" . $row["db_password"] . "</td>"; 
+			echo "<td>" . $row["date"] . "</td>"; 
+			echo "<td>" . '<a href=getimage.php?id=' . $row["id"] . '><img width=75px src="data:image/jpeg;base64,' . base64_encode($row['db_picture']) . '"/></a>' . "</td>";
+			echo "<td>" . '<a href=edit.php?id=' . $row["id"] . '><img src="Buttons/edit.jpg" height="30"/></a>' . "</td>";
+			echo "<td>" . '<a href=delete.php?id=' . $row["id"] . '><img src="Buttons/delete.jpg" height="30"/></a>' . "</td></tr></tbody>";
 		}
+	}else{
+		echo "0 results";
 	}
+	echo "</table>" . "<br>";
 	$conn->close();
 ?>
