@@ -28,10 +28,10 @@
 </html>
 <?php
 	// logging into the database
-	$servername = ;
-	$username = ;
-	$password_1 = ;
-	$dbname = ;
+	$servername = "127.0.0.1";
+	$username = "iso_";
+	$password_1 = "Asia123456";
+	$dbname = "iso_";
 	
 	$conn = new mysqli($servername, $username, $password_1, $dbname);
 	if ($conn->connect_error) {
@@ -44,12 +44,12 @@
 	$age = $_POST["db_age"];
 	$gender = $_POST["db_gender"];
 	$hob = $_POST["db_hobby"];
-	$hobby = implode["; ",$hob];
+	$hobby = implode("; ",$hob);
 	$description = $_POST["db_description"];
 	$password = $_POST["db_password"];
 	$image=addslashes(file_get_contents($_FILES['fileToUpload']['tmp_name']));
 	
-	$sql = "INSERT INTO user (db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, db_picture, date)
+	$sql = "INSERT INTO form_data (db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, db_picture, date)
 			VALUES ('$name', '$surname', '$age', '$gender', '$hobby', '$descripton', '$password', '$image',now() )";
 	
 	if ($conn->query($sql) === TRUE) {
