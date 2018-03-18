@@ -28,10 +28,10 @@
 </html>
 <?php
 	// logging into the database
-	$servername = "127.0.0.1";
-	$username = "iso_";
-	$password_1 = "Asia123456";
-	$dbname = "iso_";
+	$servername = "";
+	$username = "";
+	$password_1 = "";
+	$dbname = "";
 	
 	$conn = new mysqli($servername, $username, $password_1, $dbname);
 	if ($conn->connect_error) {
