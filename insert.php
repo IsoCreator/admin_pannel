@@ -52,16 +52,19 @@
 	$sql = "INSERT INTO form_data (db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, db_picture, date)
 			VALUES ('$name', '$surname', '$age', '$gender', '$hobby', '$descripton', '$password', '$image',now() )";
 	
-	if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully" . "<br>";
-	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	{
+		if ($conn->query($sql) === TRUE) {
+		echo "New record created successfully" . "<br>";
+		} else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}
 	}
-	
+		
 	echo "<table class='table'>";
 	echo "<thead><tr><th scope='col'>Id</th><th scope='col'>Name</th><th scope='col'>Surname</th><th scope='col'>Age</th><th scope='col'>Gender</th><th scope='col'>Interests</th><th scope='col'>Description</th><th scope='col'>Password</th><th scope='col'Date added</th><th scope='col'>Photo</th><th scope='col'>Edit</th><th scope='col'>Delete</th></tr></thead>";
 	
-	$sql = "SELECT id, db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, date, db_picture FROM user";
+	$sql = "SELECT id, db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, date, db_picture FROM form_data";
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {
