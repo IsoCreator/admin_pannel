@@ -59,16 +59,8 @@
 				<div class="col-md-14">
 
 <?php
-	// logging into the database
-	$servername = "";
-	$username = "";
-	$password_1 = "";
-	$dbname = "";
-	
-	$conn = new mysqli($servername, $username, $password_1, $dbname);
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
+	// connect to the database
+	include('connect_db.php');
 	
 	// name_here = $_POST["name_in_database"];
 	$name = $_POST["db_name"];
@@ -110,9 +102,9 @@
 			echo "<td>" . $row["db_description"] . "</td>"; 
 			echo "<td>" . $row["db_password"] . "</td>"; 
 			echo "<td>" . $row["date"] . "</td>"; 
-			echo "<td>" . '<a href=getimage.php?id=' . $row["id"] . '><img width=75px class="img-thumbnail" src="data:image/jpeg;base64,' . base64_encode($row['db_picture']) . '"/></a>' . "</td>";
-			echo "<td>" . '<a href=edit.php?id=' . $row["id"] . '><img src="Buttons/edit.jpg" width=50px class="img-thumbnail"/></a>' . "</td>";
-			echo "<td>" . '<a href=delete.php?id=' . $row["id"] . '><img src="Buttons/delete.jpg" width=50px class="img-thumbnail"/></a>' . "</td></tr></tbody>";
+			echo "<td>" . '<a href=get_image.php?id=' . $row["id"] . '><img width=75px class="img-thumbnail" src="data:image/jpeg;base64,' . base64_encode($row['db_picture']) . '"/></a>' . "</td>";
+			echo "<td>" . '<a href=edit.php?id=' . $row["id"] . '><img src="Buttons/edit.jpg" width=40px class="img-thumbnail"/></a>' . "</td>";
+			echo "<td>" . '<a href=delete.php?id=' . $row["id"] . '><img src="Buttons/delete.jpg" width=40px class="img-thumbnail"/></a>' . "</td></tr></tbody>";
 		}
 	}else{
 		echo "0 results";
