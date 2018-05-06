@@ -74,7 +74,7 @@
 	$image=addslashes(file_get_contents($_FILES['fileToUpload']['tmp_name']));
 	
 	$sql = "INSERT INTO form_data (db_name, db_surname, db_age, db_gender, db_hobby, db_description, db_password, db_picture, date)
-			VALUES ('$name', '$surname', '$age', '$gender', '$hobby', '$descripton', '$password', '$image',now() )";
+			VALUES ('$name', '$surname', '$age', '$gender', '$hobby', '$description', '$password', '$image',now() )";
 	
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
@@ -103,8 +103,8 @@
 			echo "<td>" . $row["db_password"] . "</td>"; 
 			echo "<td>" . $row["date"] . "</td>"; 
 			echo "<td>" . '<a href=get_image.php?id=' . $row["id"] . '><img width=75px class="img-thumbnail" src="data:image/jpeg;base64,' . base64_encode($row['db_picture']) . '"/></a>' . "</td>";
-			echo "<td>" . '<a href=edit.php?id=' . $row["id"] . '><img src="Buttons/edit.jpg" width=40px class="img-thumbnail"/></a>' . "</td>";
-			echo "<td>" . '<a href=delete.php?id=' . $row["id"] . '><img src="Buttons/delete.jpg" width=40px class="img-thumbnail"/></a>' . "</td></tr></tbody>";
+			echo "<td>" . '<a href=edit.php?id=' . $row["id"] . '><img src="Buttons/edit.jpg" width=50px class="img-thumbnail"/></a>' . "</td>";
+			echo "<td>" . '<a href=delete.php?id=' . $row["id"] . '><img src="Buttons/delete.jpg" width=50px class="img-thumbnail"/></a>' . "</td></tr></tbody>";
 		}
 	}else{
 		echo "0 results";
