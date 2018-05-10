@@ -84,7 +84,7 @@
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 	}
-		
+	
 	echo "<table class='table'>";
 	echo "<thead><tr><th scope='col'>Id</th><th scope='col'>Name</th><th scope='col'>Surname</th><th scope='col'>Age</th><th scope='col'>Gender</th><th scope='col'>Interests</th><th scope='col'>Description</th><th scope='col'>Password</th><th scope='col'>Date added</th><th scope='col'>Photo</th><th scope='col'>Edit</th><th scope='col'>Delete</th></tr></thead>";
 	
