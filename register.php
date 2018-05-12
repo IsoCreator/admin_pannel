@@ -10,5 +10,5 @@
 	
 	$conn->close();
 	
-	header("Location: insert.php");
+	header("Location: index.html");
 ?>
