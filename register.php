@@ -3,13 +3,13 @@
 	include('connect_db.php');
 	
 	// name_here = $_POST["name_in_database"];
-	$name = $_POST["reg_db_username"];
-	$surname = $_POST["reg_db_password"];
-	$age = $_POST["reg_db_email"];
+	$reg_username = $_POST["reg_db_username"];
+	$reg_password = $_POST["reg_db_password"];
+	$reg_email = $_POST["reg_db_email"];
 
 	
 	$sql = "INSERT INTO reg_data (reg_db_username, reg_db_password, reg_db_email)
-			VALUES ('$name', '$surname', '$age' )";
+			VALUES ('$reg_username', '$reg_password', '$reg_email' )";
 	
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
