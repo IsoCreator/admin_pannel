@@ -11,13 +11,14 @@
 	$email = $conn->escape_string($_POST["email"]);
 	$hash = $conn->escape_string(md5( rand(0,1000)));
 
-	$result = $conn->query("SELECT * FROM reg_data WHERE reg_db_email='$email'") or die($mysqli->error());
-
+	$result = $conn->query("SELECT * FROM reg_data WHERE email='$email'") or die($mysqli->error());
+//echo $email;
 	if($result->num_rows > 0){
 		$_SESSION['message'] = 'User with this username already exists!';
 		header("location: error.php");
+		//echo 'maybe here?';
 	}else{
-		$sql = "INSERT INTO reg_data (reg_db_username, reg_db_password, reg_db_email, hash)
+		$sql = "INSERT INTO reg_data (username, password, email, hash)
 		VALUES ('$username', '$password', '$email', '$hash' )";
 	
 		if($conn->query($sql)){
